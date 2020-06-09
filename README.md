@@ -22,15 +22,15 @@ you have run the above command and every time you open an new terminal window.
 
 We need the following models for this projects.
 
-* Face Detection Model
+* [Face Detection Model](https://docs.openvinotoolkit.org/latest/_models_intel_face_detection_adas_binary_0001_description_face_detection_adas_binary_0001.html)
 
-* Facial Landmarks Detection Model
+* [Facial Landmarks Detection Model](https://docs.openvinotoolkit.org/latest/_models_intel_landmarks_regression_retail_0009_description_landmarks_regression_retail_0009.html)
 
-* Head Pose Estimation Model
+* [Head Pose Estimation Model](https://docs.openvinotoolkit.org/latest/_models_intel_head_pose_estimation_adas_0001_description_head_pose_estimation_adas_0001.html)
 
-* Gaze Estimation Model
+* [Gaze Estimation Model](https://docs.openvinotoolkit.org/latest/_models_intel_gaze_estimation_adas_0002_description_gaze_estimation_adas_0002.html)
 
-###Step 2: Downloading the pre-trained models
+### Step 2: Downloading the pre-trained models
 
 * Goto the model download directory
 
@@ -47,7 +47,7 @@ cd C:\Program Files (x86)\IntelSWTools\openvino\deployment-tools\tools\model_dow
 
 3. Download Head Pose Estimation Model
 
-python downloader.py --name head-pose-estimation-adas-0001
+    python downloader.py --name head-pose-estimation-adas-0001
 
 
 4. Download Gaze Estimation Model
@@ -57,41 +57,10 @@ python downloader.py --name head-pose-estimation-adas-0001
 ## Project Structure
 
 E:\udacity\starter (1)\starter\src>tree /f
+[](image/capture.png)
 
 
-Folder PATH listing for volume Bilal Data
-
-Volume serial number is CEB1-3134
-
-E:.
-?   demo.mp4
-?   face-detection-adas-binary-0001.bin
-?   face-detection-adas-binary-0001.xml
-?   face_detection.py
-?   facial_landmarks_detection.py
-?   gaze-estimation-adas-0002.bin
-?   gaze-estimation-adas-0002.xml
-?   gaze_estimation.py
-?   head-pose-estimation-adas-0001.bin
-?   head-pose-estimation-adas-0001.xml
-?   head_pose_estimation.py
-?   input_feeder.py
-?   landmarks-regression-retail-0009.bin
-?   landmarks-regression-retail-0009.xml
-?   main.py
-?   mouse_controller.py
-?   python
-?
-????__pycache__
-        face_detection.cpython-36.pyc
-        facial_landmarks_detection.cpython-36.pyc
-        gaze_estimation.cpython-36.pyc
-        head_pose_estimation.cpython-36.pyc
-        input_feeder.cpython-36.pyc
-        mouse_controller.cpython-36.pyc
-
-
-###Demo 
+### Demo 
 TO run the project using the following command
 python main.py -f face-detection-adas-binary-0001.xml -fl landmarks-regression-retail-0009.xml -hp head-pose-estimation-adas-0001.xml -g gaze-estimation-adas-0002.xml -i demo.mp4
 ## Documentation
