@@ -57,12 +57,16 @@ cd C:\Program Files (x86)\IntelSWTools\openvino\deployment-tools\tools\model_dow
 ## Project Structure
 
 E:\udacity\starter (1)\starter\src>tree /f
-[](image/capture.png)
+
+
+ ![ ](image/Capture2.PNG)
 
 
 ### Demo 
 TO run the project using the following command
+
 python main.py -f face-detection-adas-binary-0001.xml -fl landmarks-regression-retail-0009.xml -hp head-pose-estimation-adas-0001.xml -g gaze-estimation-adas-0002.xml -i demo.mp4
+ ![ ](image/Capture.PNG)
 ## Documentation
 This project support the following command
 E:\udacity\starter (1)\starter\src>python main.py -h
@@ -93,26 +97,30 @@ optional arguments:
                         or MYRIAD is acceptable. Sample will look for a
                         suitable plugin for device specified (CPU by default)
 
-##Documentation of Model
-1. Face Detection Model
-2. Facial Landmarks Detection Model
-3. Head Pose Estimation Model
-4. Gaze Estimation Model
-## 
+## Documentation of Model
+* [Face Detection Model](https://docs.openvinotoolkit.org/latest/_models_intel_face_detection_adas_binary_0001_description_face_detection_adas_binary_0001.html)
+
+* [Facial Landmarks Detection Model](https://docs.openvinotoolkit.org/latest/_models_intel_landmarks_regression_retail_0009_description_landmarks_regression_retail_0009.html)
+
+* [Head Pose Estimation Model](https://docs.openvinotoolkit.org/latest/_models_intel_head_pose_estimation_adas_0001_description_head_pose_estimation_adas_0001.html)
+
+* [Gaze Estimation Model](https://docs.openvinotoolkit.org/latest/_models_intel_gaze_estimation_adas_0002_description_gaze_estimation_adas_0002.html)
 ## Benchmarks
 
 
 
-INT8
+### INT8
+
+![ ](image/Capture5.PNG)
+
+### FP16
+ ![ ](image/Capture3.PNG)
 
 
-
-FP16
-
-
-
-FP32
-
+### FP32
+ 
+ ![ ](image/Capture4.PNG)
+ 
 ## Results
 * First of all, after decreasing prescison, accuracy of the model decreases
 * As we see that GPA excutes more frames than the different hardwares, that goes the excution units and isntruction sets which is compatible and optmized with FP16
