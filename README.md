@@ -5,39 +5,64 @@
 
 # Computer Pointer Controller
 
-*TODO:* Write a short introduction to your project
+Write a short introduction to your project
 In this project, we can control our mouse pointer using gaze detection model,face detection model,headpose detection model and facial landmarks detection model.
 
 ## Project Set Up and Installation
 
-Step 1:Ground work
+### Step 1:Ground work
 * Firstly install the prerequisites from requirement.txt
-Pip install -r requirement.txt
+    
+    Pip install -r requirement.txt
 * Initialize the openvino environment
-cd C:\Program Files (x86)\IntelSWTools\openvino\bin\.setupvars.bat
+
+   C:\Users\Muhammad Bilal>cd C:\Program Files (x86)\IntelSWTools\openvino\bin\setupvars.bat
+
 you have run the above command and every time you open an new terminal window.
+
 We need the following models for this projects.
+
 * Face Detection Model
+
 * Facial Landmarks Detection Model
+
 * Head Pose Estimation Model
+
 * Gaze Estimation Model
 
-Step 2: Downloading the pre-trained models
+###Step 2: Downloading the pre-trained models
+
 * Goto the model download directory
+
 cd C:\Program Files (x86)\IntelSWTools\openvino\deployment-tools\tools\model_downlaoder
+
 1. Download Face Detection Model
-    python downloader.py --name face-detection-adas-binary-0001
+   
+   
+   python downloader.py --name face-detection-adas-binary-0001
+
 2. Download Facial landmark detection model 
+       
        python downloader.py --name landmarks-regression-retail-0009
+
 3. Download Head Pose Estimation Model
+
 python downloader.py --name head-pose-estimation-adas-0001
+
+
 4. Download Gaze Estimation Model
-       python downloader.py --name gaze-estimation-adas-0002
+  
+  python downloader.py --name gaze-estimation-adas-0002
 
 ## Project Structure
+
 E:\udacity\starter (1)\starter\src>tree /f
+
+
 Folder PATH listing for volume Bilal Data
+
 Volume serial number is CEB1-3134
+
 E:.
 ?   demo.mp4
 ?   face-detection-adas-binary-0001.bin
