@@ -6,6 +6,7 @@
 # Computer Pointer Controller
 
 Write a short introduction to your project
+
 In this project, we can control our mouse pointer using gaze detection model,face detection model,headpose detection model and facial landmarks detection model.
 
 ## Project Set Up and Installation
@@ -67,6 +68,9 @@ TO run the project using the following command
 
     python main.py -f face-detection-adas-binary-0001.xml -fl landmarks-regression-retail-0009.xml -hp head-pose-estimation-adas-0001.xml -g gaze-estimation-adas-0002.xml -i demo.mp4
  ![ ](image/Capture.PNG)
+ ### To Run on the Webcam
+     python main.py -f face-detection-adas-binary-0001.xml -fl landmarks-regression-retail-0009.xml -hp head-pose-estimation-adas-0001.xml -g gaze-estimation-adas-0002.xml -i demo.mp4 -d CAM
+      ![ ](image/Capture.PNG)
 ## Documentation
 This project support the following command
 E:\udacity\starter (1)\starter\src>python main.py -h
@@ -97,6 +101,14 @@ E:\udacity\starter (1)\starter\src>python main.py -h
                                 Specify the target device to infer on: CPU, GPU, FPGA
                                 or MYRIAD is acceptable. Sample will look for a
                                 suitable plugin for device specified (CPU by default)
+                                
+                                
+                                
+                                
+ ### Flow Diagram
+  ![ ](image/pipeline.png)
+  
+  Digram showing , the Flow of input data through the different openvino pre-train model, to controll difernce cordinate of the mouse.     The diagram show have the pre-train model input and output. if the shape or data are different for every model you can obserb this       preprocessing method.
 ## Documentation of Model
 * [Face Detection Model](https://docs.openvinotoolkit.org/latest/_models_intel_face_detection_adas_binary_0001_description_face_detection_adas_binary_0001.html)
 
@@ -122,9 +134,7 @@ E:\udacity\starter (1)\starter\src>python main.py -h
  ![ ](image/Capture4.PNG)
  
 ## Results
-* First of all, after decreasing prescison, accuracy of the model decreases
-* As we see that GPA excutes more frames than the different hardwares, that goes the excution units and isntruction sets which is compatible and optmized with FP16
-* FPGA takes higher inference time because it works on each gate and programmed it to be compatible for this application
+As we see the above result, model with lower precision give us better inference time but yhey lose in accuracy. This happens because lower precision model uses less memory and they are less computationally expensive.
 ### Edge Cases
 If there is more than one face detected, it extracts only one face and do inference on it and ignoring other faces.
 
