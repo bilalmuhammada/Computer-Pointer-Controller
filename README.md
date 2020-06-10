@@ -39,7 +39,7 @@ cd C:\Program Files (x86)\IntelSWTools\openvino\deployment-tools\tools\model_dow
 1. Download Face Detection Model
    
    
-   python downloader.py --name face-detection-adas-binary-0001
+       python downloader.py --name face-detection-adas-binary-0001
 
 2. Download Facial landmark detection model 
        
@@ -47,12 +47,12 @@ cd C:\Program Files (x86)\IntelSWTools\openvino\deployment-tools\tools\model_dow
 
 3. Download Head Pose Estimation Model
 
-    python downloader.py --name head-pose-estimation-adas-0001
+       python downloader.py --name head-pose-estimation-adas-0001
 
 
 4. Download Gaze Estimation Model
   
-  python downloader.py --name gaze-estimation-adas-0002
+       python downloader.py --name gaze-estimation-adas-0002
 
 ## Project Structure
 
@@ -70,33 +70,33 @@ python main.py -f face-detection-adas-binary-0001.xml -fl landmarks-regression-r
 ## Documentation
 This project support the following command
 E:\udacity\starter (1)\starter\src>python main.py -h
-usage: main.py [-h] -f FACE_DETECTION_MODEL -fl FACIAL_LANDMARK_MODEL -hp
+
+    usage: main.py [-h] -f FACE_DETECTION_MODEL -fl FACIAL_LANDMARK_MODEL -hp
                HEAD_POSE_MODEL -g GAZE_ESTIMATION_MODEL -i INPUT
                [-l CPU_EXTENSION] [-pt PROB_THRESHOLD] [-d DEVICE]
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -f FACE_DETECTION_MODEL, --face_detection_model FACE_DETECTION_MODEL
-                        Path to an .xml file with Face Detection model.
-  -fl FACIAL_LANDMARK_MODEL, --facial_landmark_model FACIAL_LANDMARK_MODEL
-                        Path to an .xml file with Facial Landmark Detection
-                        model.
-  -hp HEAD_POSE_MODEL, --head_pose_model HEAD_POSE_MODEL
-                        Path to an .xml file with Head Pose Estimation model.
-  -g GAZE_ESTIMATION_MODEL, --gaze_estimation_model GAZE_ESTIMATION_MODEL
-                        Path to an .xml file with Gaze Estimation model.
-  -i INPUT, --input INPUT
-                        Path to image or video file or CAM
-  -l CPU_EXTENSION, --cpu_extension CPU_EXTENSION
-                        MKLDNN (CPU)-targeted custom layers.Absolute path to a
-                        shared library with thekernels impl.
-  -pt PROB_THRESHOLD, --prob_threshold PROB_THRESHOLD
-                        Probability threshold for detection fitering.
-  -d DEVICE, --device DEVICE
-                        Specify the target device to infer on: CPU, GPU, FPGA
-                        or MYRIAD is acceptable. Sample will look for a
-                        suitable plugin for device specified (CPU by default)
-
+        optional arguments:
+          -h, --help            show this help message and exit
+          -f FACE_DETECTION_MODEL, --face_detection_model FACE_DETECTION_MODEL
+                                Path to an .xml file with Face Detection model.
+          -fl FACIAL_LANDMARK_MODEL, --facial_landmark_model FACIAL_LANDMARK_MODEL
+                                Path to an .xml file with Facial Landmark Detection
+                                model.
+          -hp HEAD_POSE_MODEL, --head_pose_model HEAD_POSE_MODEL
+                                Path to an .xml file with Head Pose Estimation model.
+          -g GAZE_ESTIMATION_MODEL, --gaze_estimation_model GAZE_ESTIMATION_MODEL
+                                Path to an .xml file with Gaze Estimation model.
+          -i INPUT, --input INPUT
+                                Path to image or video file or CAM
+          -l CPU_EXTENSION, --cpu_extension CPU_EXTENSION
+                                MKLDNN (CPU)-targeted custom layers.Absolute path to a
+                                shared library with thekernels impl.
+          -pt PROB_THRESHOLD, --prob_threshold PROB_THRESHOLD
+                                Probability threshold for detection fitering.
+          -d DEVICE, --device DEVICE
+                                Specify the target device to infer on: CPU, GPU, FPGA
+                                or MYRIAD is acceptable. Sample will look for a
+                                suitable plugin for device specified (CPU by default)
 ## Documentation of Model
 * [Face Detection Model](https://docs.openvinotoolkit.org/latest/_models_intel_face_detection_adas_binary_0001_description_face_detection_adas_binary_0001.html)
 
