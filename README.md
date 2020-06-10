@@ -70,7 +70,8 @@ TO run the project using the following command
  ![ ](image/Capture.PNG)
  ### To Run on the Webcam
      python main.py -f face-detection-adas-binary-0001.xml -fl landmarks-regression-retail-0009.xml -hp head-pose-estimation-adas-0001.xml -g gaze-estimation-adas-0002.xml -i demo.mp4 -d CAM
-      ![ ](image/Capture.PNG)
+     
+     ![ ](image/Capture6.PNG)
 ## Documentation
 This project support the following command
 E:\udacity\starter (1)\starter\src>python main.py -h
