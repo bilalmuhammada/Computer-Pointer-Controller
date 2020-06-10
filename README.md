@@ -13,10 +13,10 @@ In this project, we can control our mouse pointer using gaze detection model,fac
 ### Step 1:Ground work
 * Firstly install the prerequisites from requirement.txt
     
-    Pip install -r requirement.txt
+        Pip install -r requirement.txt
 * Initialize the openvino environment
 
-   C:\Users\Muhammad Bilal>cd C:\Program Files (x86)\IntelSWTools\openvino\bin\setupvars.bat
+         C:\Users\Muhammad Bilal>cd C:\Program Files (x86)\IntelSWTools\openvino\bin\setupvars.bat
 
 you have run the above command and every time you open an new terminal window.
 
@@ -34,7 +34,7 @@ We need the following models for this projects.
 
 * Goto the model download directory
 
-cd C:\Program Files (x86)\IntelSWTools\openvino\deployment-tools\tools\model_downlaoder
+        cd C:\Program Files (x86)\IntelSWTools\openvino\deployment-tools\tools\model_downlaoder
 
 1. Download Face Detection Model
    
@@ -65,7 +65,7 @@ E:\udacity\starter (1)\starter\src>tree /f
 ### Demo 
 TO run the project using the following command
 
-python main.py -f face-detection-adas-binary-0001.xml -fl landmarks-regression-retail-0009.xml -hp head-pose-estimation-adas-0001.xml -g gaze-estimation-adas-0002.xml -i demo.mp4
+    python main.py -f face-detection-adas-binary-0001.xml -fl landmarks-regression-retail-0009.xml -hp head-pose-estimation-adas-0001.xml -g gaze-estimation-adas-0002.xml -i demo.mp4
  ![ ](image/Capture.PNG)
 ## Documentation
 This project support the following command
